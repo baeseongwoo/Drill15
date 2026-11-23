@@ -193,4 +193,6 @@ class Boy:
         if group == 'boy:ball':
             print('공이랑 충돌')
             # game_world.remove_object(other) 이 방법은 교수님피셜 맘에 안든다. 이유는 잘모르겠음 
-            self.ball_count += 1 
+            self.ball_count += 1
+        elif group == 'boy:zombie':
+            print("좀비와 충돌, 게임 종료")
