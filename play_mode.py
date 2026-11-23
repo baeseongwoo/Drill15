@@ -47,6 +47,8 @@ def init():
     game_world.add_objects(zombies, 1)
     for zombie in zombies:
         game_world.add_collision_pair("zombie:ball", zombie, None)  # 좀비와 발사한 공 충돌 관계 등록
+        game_world.add_collision_pair("boy:zombie", None, zombie)   # 소년과 좀비의 충돌 관계 등록
+    game_world.add_collision_pair("boy:zombie", boy, None)
 
 def pause():
     boy.pause()
