@@ -196,3 +196,4 @@ class Boy:
             self.ball_count += 1
         elif group == 'boy:zombie':
             print("좀비와 충돌, 게임 종료")
+            game_framework.quit() #소년-좀비 충돌시 강제종료
