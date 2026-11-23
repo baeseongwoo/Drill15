@@ -60,4 +60,10 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
-            pass
+            self.hit_count += 1
+            if self.hit_count == 1: #한번 맞았을때
+                bottom = self.y - self.size / 2
+                self.size //= 2
+                self.y = bottom + self.size / 2
+            elif self.hit_count >= 2: #두번 맞았을때
+                game_world.remove_object(self)
